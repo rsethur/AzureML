@@ -35,7 +35,11 @@
     * `How to use Azure ML`  -> `Deployment` -> click `Clone` on `model-register-and-deploy`
 2. Run the notebook cell by cell
 <br>__Note__: Before running the last cell that deletes the deployed service, goto the new [ML workspace](ml.azure.com) and checkout `Endpoints` in the left nav
-3. Take time to understand the code in the notebook and `score.py` 
+3. Take time to understand the code in the notebook and `score.py`
+
+#### Optional Excercises
+1. __Leverage AutoML__ via Azure ML Python SDK : Clone and execute any automl notebook excercise from the `Azure ML Samples` in jupyter landing page
+2. __Leverage Databricks__ via Azure ML Python SDK : This is bit more involved as you need to execute this from Databricks workspace. Instructions [here](https://github.com/Azure/MachineLearningNotebooks/tree/master/how-to-use-azureml/azure-databricks).
     
 #### Clean up: 
 Wait for the discussion to be over in the workshop before cleaning up.
