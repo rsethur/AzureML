@@ -13,7 +13,7 @@
     1. `How to use Azure ML`  -> `Training` -> click `Clone` on `train-on-amlcompute`
     2. If notebook is not already opened:
         1. Navigiate to `Files` from the top nav -> goto folder `train-on-amlcompute`
-        2. If notebook is not already opened: Open the notebook by clicking on it `train-on-amlcompute.ipynb`
+        2. Open the notebook by clicking on it `train-on-amlcompute.ipynb`
 2. Run the notebook cell by cell
     * __Important__: In the notebook no need to run from Section `Provision as a persistent compute target (Advanced)` onwards
 3. After training is done, cleanup the compute cluster: In the last line uncomment this and execute `cpu_cluster.delete()`
