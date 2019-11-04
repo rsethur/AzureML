@@ -5,15 +5,20 @@
 2. Navigate to `Compute` in the left nav
 3. Notebook VM Tab: Click `+New` -> choose a name and VM type (e.g. STANDARD_DS13_V2 which has 8 VCPUs)
 4. Click Create
-5. Once the Notebook VM is provisioned, you will see three links: `JupyterLab`, `Jupyter` and `R-Studio`
-6. For purposes of this workshop, select `Jupyter` (this leads to the Jupyter landing page) 
+5. Once the Notebook VM is provisioned, you will see three links: `JupyterLab`, `Jupyter` and `R-Studio`. Follow next steps.
 
-#### Step 2: Train a model (Diabetes Dataset)
-1. In the `Jupyter` landing page, go to the tab `Azure ML Samples`
-    1. `How to use Azure ML`  -> `Training` -> click `Clone` on `train-on-amlcompute`
-    2. If notebook is not already opened:
-        1. Navigiate to `Files` from the top nav -> goto folder `train-on-amlcompute`
-        2. Open the notebook by clicking on it `train-on-amlcompute.ipynb`
+#### Step 2: Clone the Azure ML Notebooks repo
+1. Clone the Azure ML Notebooks repo 
+    1. Once the Notebook VM is created, open `JupyterLab` link
+    2. In the right panel, select terminal. This will open a terminal window.
+    3. List the directory by running `ls`. There will be a directory with your user name: navigate into it by executing `cd <dir name>`
+    4. execute `git clone https://github.com/Azure/MachineLearningNotebooks.git`
+2. Now you can close the `JupyterLab` window
+3. Open the `Jupyter` window from the Notebook VM page: All the notebooks are inside the directory `MachineLearningNotebooks`
+
+#### Step 3: Train a model (Diabetes Dataset)
+1. In `Jupyter`, open the notebook `train-on-amlcompute.ipynb`, in the folder `MachineLearningNotebooks/howto-use-azureml/training/train-on-amlcompute`
+<BR> It will prompt you to select a kernel: select `Python 3.6 AzureML` and click button `Set Kernel`. If you miss it accidentally, you can set it by going to top menu of the notebook: `Kernel` -> `Change kernel`
 2. Run the notebook cell by cell
     * __Important__: In the notebook no need to run from Section `Provision as a persistent compute target (Advanced)` onwards
 3. After training is done, cleanup the compute cluster: In the last line uncomment this and execute `cpu_cluster.delete()`
@@ -30,16 +35,15 @@
     This uses the diabetes dataset used by the next section (Deploy). 
 
 
-#### Step 3: Deploy and score the model (Iris Dataset)
-1. Similar to above, in the `Jupyter` landing page, go to the tab `Azure ML Samples`
-    * `How to use Azure ML`  -> `Deployment` -> click `Clone` on `model-register-and-deploy`
+#### Step 4: Deploy and score the model (Iris Dataset)
+1. In `Jupyter`, open the notebook `model-register-and-deploy.ipynb`, in the folder `MachineLearningNotebooks/howto-use-azureml/deployment/deploy-to-cloud/`
 2. Run the notebook cell by cell
 <br>__Note__: Before running the last cell that deletes the deployed service, goto the new [ML workspace](ml.azure.com) and checkout `Endpoints` in the left nav
 3. Take time to understand the code in the notebook and `score.py`
 
 #### Optional Excercises
-1. __Leverage AutoML__ via Azure ML Python SDK : Clone and execute any automl notebook excercise from the `Azure ML Samples` in jupyter landing page
-2. __Leverage Databricks__ via Azure ML Python SDK : This is bit more involved as you need to execute this from Databricks workspace. Instructions [here](https://github.com/Azure/MachineLearningNotebooks/tree/master/how-to-use-azureml/azure-databricks).
+1. __Leverage AutoML__ via Azure ML Python SDK :Execute any automl notebook excercise from `MachineLearningNotebooks/how-to-use-azureml/automated-machine-learning`
+2. __Leverage Databricks__ via Azure ML Python SDK : This is bit more involved as you need to execute this from Databricks workspace. Details are here: `MachineLearningNotebooks/how-to-use-azureml/automated-machine-learning/azure-databricks/README.md`
     
 #### Clean up: 
 Wait for the discussion to be over in the workshop before cleaning up.
