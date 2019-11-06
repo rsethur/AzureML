@@ -1,7 +1,7 @@
 ## Train & Deploy a model using Azure ML Python SDK
 
 #### Step 1: Clone the Azure ML Samples
-1. Goto to new [ML workspace](ml.azure.com) (Called Studio now)
+1. Goto to new [ML workspace](https://ml.azure.com) (Called Studio now)
 2. Navigate to `Notebooks` in the left nav
 3. Expand the `Azure ML gallery` :arrow_right: `Samples` :arrow_right: `Python` :arrow_right: `1.x.x`
 4. Hover over `How-to-use-azureml` :arrow_right: click on the three dots displayed in the right side :arrow_right: click `Clone`.
